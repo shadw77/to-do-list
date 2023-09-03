@@ -1,0 +1,20 @@
+<div class="row align-items-center">
+  <div class="col">
+    <button class="btn btn-primary fs-4 p-3"  (click)="Complete($event, i)" *ngIf="isItems">
+      Complete
+    </button>
+  </div>
+  <div class="col">
+    <button class="btn btn-primary fs-4 p-3" (click)="removeItem(i)" *ngIf="isItems">Delete</button>
+  </div>
+  <div class="col">
+    <h3  class="fw-bold"
+      id="ite"
+      [ngStyle]="{
+        'text-decoration': isCompleted == true ? 'line-through' : 'none'
+      }"
+    >
+      {{ item }}
+    </h3>
+  </div>
+</div>
